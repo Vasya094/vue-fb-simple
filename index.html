@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+      <form id="add-cafe-form">
+        <input type="text" name="name" placeholder="Cofe name" />
+        <input type="text" name="city" placeholder="Cofe city" />
+        <button type="submit">Add coffe</button>
+      </form>
+
+      <ul id="cafe-list"></ul>
+    </div>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCkPDvbNTvj75uIlSNxm35rmzTmL3g8woY",
+        authDomain: "first-ninja-fb-tut.firebaseapp.com",
+        projectId: "first-ninja-fb-tut",
+        storageBucket: "first-ninja-fb-tut.appspot.com",
+        messagingSenderId: "97711987343",
+        appId: "1:97711987343:web:6433befa9af0f7c13ceefa",
+        measurementId: "G-4NZV5J4952",
+      }
+
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig)
+      const db = firebase.firestore(app)
+      db.settings({ /* your settings... */ timestampsInSnapshots: true })
+    </script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

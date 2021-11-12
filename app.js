@@ -46,7 +46,6 @@ db.collection("cafes")
   .onSnapshot((snap) => {
     let changes = snap.docChanges()
     changes.forEach((ch) => {
-      console.log("changes:", ch.doc.data())
       if (ch.type === "added") {
         createLi(ch.doc)
       }
